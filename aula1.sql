@@ -34,3 +34,8 @@ create table tb_leciona(
 );
 
 select * from tb_leciona;
+
+select p.nome, p.horario
+from tb_professor p, tb_turma t, tb_leciona l
+where p.cpf = l.cpf_professor 
+and t.numero = l.numero_turma;
